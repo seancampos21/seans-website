@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Into the Wild: A Mountain Lion Encounter</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-      background-color: #f2f2f2;
-      line-height: 1.6;
-      transition: background-color 0.5s, color 0.5s;
-    }
+   body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f2f2f2;
+  background-image: url('https://images.unsplash.com/photo-1548191265-cc70d3d45ba1?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  line-height: 1.6;
+  transition: background-color 0.5s, color 0.5s;
+}
     body.night {
       background-color: #0d0d0d;
       color: #ccc;
@@ -163,4 +167,3 @@
   </footer>
 </body>
 </html>
-
