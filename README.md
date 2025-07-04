@@ -103,10 +103,10 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1601758003122-58e1cb900d21?auto=format&fit=crop&w=800&q=80" alt="Mountain lion">
-      <img src="https://images.unsplash.com/photo-1600788813386-bd75df80fbf2?auto=format&fit=crop&w=800&q=80" alt="Puma looking back">
-      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80" alt="Santa Cruz redwoods">
-      <img src="https://images.unsplash.com/photo-1551907234-70c6b1e5f1e1?auto=format&fit=crop&w=800&q=80" alt="Foggy trail">
+      <img src="https://images.unsplash.com/photo-1594495894805-9fdbfcd91530?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain lion resting">
+      <img src="https://images.unsplash.com/photo-1605719102697-0705b934fcd4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain lion in woods">
+      <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5e3de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Santa Cruz redwoods">
+      <img src="https://images.unsplash.com/photo-1523406339820-0a648b59ba2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foggy redwood trail">
     </div>
   </section>
 
