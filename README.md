@@ -62,6 +62,11 @@
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 10px;
       margin-top: 2rem;
+      transition: transform 0.4s ease, opacity 0.6s ease;
+    }
+    section.visible {
+      transform: translateY(0);
+      opacity: 1;
     }
     .gallery {
       display: grid;
@@ -88,11 +93,11 @@
       border: none;
       margin-top: 2rem;
     }
-    .predator {
+    .predator, .trail-guide, .audio-btn, .ai-chat {
       text-align: center;
       margin-top: 2rem;
     }
-    .predator img {
+    .predator img, .trail-guide img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
@@ -100,9 +105,22 @@
     .video {
       margin-top: 2rem;
     }
+    .audio-btn button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
+  <audio id="night-audio" src="https://cdn.pixabay.com/download/audio/2022/10/31/audio_d2b0f24df4.mp3?filename=crickets-chirping-night-nature-ambient-sound-124248.mp3" preload="auto" loop></audio>
+  <audio id="scream-sfx" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
   <header>
     <h1>Into the Wild: A Mountain Lion Encounter</h1>
   </header>
@@ -122,9 +140,14 @@
     <p>I didn’t see it. But I heard it. And I knew — it was a mountain lion.</p>
   </section>
 
+  <section class="audio-btn">
+    <h3>Hear the Scream</h3>
+    <button onclick="document.getElementById('scream-sfx').play()">Play Mountain Lion Scream</button>
+  </section>
+
   <section class="video">
     <h2>Watch: Understanding Mountain Lions</h2>
-    <iframe src="https://www.youtube.com/embed/vqY3L8C25uk" title="Mountain Lion Educational Video" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Dk_ooNHchRY" title="Mountain Lion Educational Video" allowfullscreen></iframe>
   </section>
 
   <section id="gallery">
@@ -155,10 +178,33 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.278511875311!2d-122.2234288240162!3d37.258078739683556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa36b535eee29%3A0x8497353c6503cf71!2sPortola%20Redwoods%20State%20Park!5e0!3m2!1sen!2sus!4v1720067580000!5m2!1sen!2sus" allowfullscreen=""></iframe>
   </section>
 
+  <section class="trail-guide">
+    <h2>Explore More: Nearby Trails</h2>
+    <p>If you're planning a visit to Portola Redwoods, check out:</p>
+    <ul>
+      <li><strong>Iverson Trail</strong> – A lush loop filled with ferns and redwoods.</li>
+      <li><strong>Slate Creek Trail</strong> – Moderate hike with some elevation gain and quiet wilderness vibes.</li>
+      <li><strong>Tiptoe Falls</strong> – A short scenic trail that leads to a peaceful waterfall.</li>
+    </ul>
+    <img src="https://images.unsplash.com/photo-1508610048659-a06c9d438a3e?auto=format&fit=crop&w=800&q=80" alt="Portola trail scenery">
+  </section>
+
   <section class="predator">
     <h2>Or Was It Something Else?</h2>
     <p>Some who’ve heard this story speculate it may never have been a mountain lion at all... but something else entirely. A predator not of this world.</p>
     <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Predator.png" alt="Predator creature from movie">
+  </section>
+
+  <section class="ai-chat">
+    <h2>Ask Me Anything</h2>
+    <p>Got a random question? Ask below and my AI will try to answer.</p>
+    <iframe
+      src="https://www.chatbase.co/chatbot-iframe/clsxcz2u8001bf508a0bs8s6k"
+      width="100%"
+      style="height: 600px; border: none; border-radius: 10px"
+      frameborder="0"
+      allow="clipboard-write">
+    </iframe>
   </section>
 
   <footer>
@@ -169,7 +215,25 @@
     const hour = new Date().getHours();
     if (hour >= 19 || hour <= 5) {
       document.body.classList.add("night");
+      document.getElementById('night-audio').play();
     }
+
+    const sections = document.querySelectorAll('section');
+    const options = { threshold: 0.1 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(30px)';
+      observer.observe(section);
+    });
   </script>
 </body>
 </html>
