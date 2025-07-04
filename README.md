@@ -88,6 +88,18 @@
       border: none;
       margin-top: 2rem;
     }
+    .predator {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .predator img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .video {
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -95,10 +107,25 @@
     <h1>Into the Wild: A Mountain Lion Encounter</h1>
   </header>
   <nav>
+    <a href="#story">Story</a>
     <a href="#gallery">Gallery</a>
     <a href="#facts">Scary Facts</a>
     <a href="#map">Map</a>
   </nav>
+
+  <section id="story">
+    <h2>The True Encounter</h2>
+    <p>Me and my girlfriend were camping at Portola Redwoods — specifically site #49. We were listening to music, drinking, and smoking weed, having ourselves a good time. Around 9:20–9:30 p.m., we heard an animal moving around in the forest area behind our campsite. At first, we thought nothing of it, since we’d seen other animals while camping before. But this one was different — it moved subtly and discreetly. It clearly was aware of us and kept its distance, moving with intention in the dark.</p>
+    <p>At around 9:45, my girlfriend turned her headlamp toward the movement and locked eyes with the animal. They had a stare-down that lasted 5–10 seconds. But when I turned to look, the animal vanished. All she saw were glowing eyes in the dark.</p>
+    <p>By 10:00 p.m., we turned off the music and put our food away in the lock box. Around 10:15, I heard the same animal again and got curious. I figured it might be a bobcat and wanted to get a look. I turned on my iPhone light and shined it into the forest, about 20 feet away where the sound had been coming from. The forest behind our site was elevated — a hilly ridge overlooking the campgrounds.</p>
+    <p>As I shined the light, I suddenly heard what sounded like a child screaming. At first, I thought it was a kid from a nearby campsite. But after a few seconds, I realized the sound was coming from where I was pointing the light — not from behind me. I was a little high, so it took a second to hit me — the sound started the moment I shined my light on it. It kept going for 5 more seconds after I turned the light off... and then it stopped.</p>
+    <p>I didn’t see it. But I heard it. And I knew — it was a mountain lion.</p>
+  </section>
+
+  <section class="video">
+    <h2>Watch: Understanding Mountain Lions</h2>
+    <iframe src="https://www.youtube.com/embed/vqY3L8C25uk" title="Mountain Lion Educational Video" allowfullscreen></iframe>
+  </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
@@ -126,6 +153,12 @@
   <section id="map">
     <h2>Map: Portola Redwoods Site #49</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.278511875311!2d-122.2234288240162!3d37.258078739683556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa36b535eee29%3A0x8497353c6503cf71!2sPortola%20Redwoods%20State%20Park!5e0!3m2!1sen!2sus!4v1720067580000!5m2!1sen!2sus" allowfullscreen=""></iframe>
+  </section>
+
+  <section class="predator">
+    <h2>Or Was It Something Else?</h2>
+    <p>Some who’ve heard this story speculate it may never have been a mountain lion at all... but something else entirely. A predator not of this world.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Predator.png" alt="Predator creature from movie">
   </section>
 
   <footer>
