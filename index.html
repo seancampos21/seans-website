@@ -8,12 +8,12 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #fff;
-      background-color: #1b1f1d;
+      color: #222;
+      background-color: #f2f2f2;
       line-height: 1.6;
     }
     header {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/49/Santa_Cruz_Mountains_Forest.jpg');
+      background-image: url('https://images.unsplash.com/photo-1617201168646-e2ba27da729b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -25,7 +25,8 @@
     }
     header h1 {
       font-size: 3rem;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #111;
       padding: 1rem 2rem;
       border-radius: 10px;
     }
@@ -49,9 +50,23 @@
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #111;
+      background-color: #ddd;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #555;
+    }
+    nav {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e4e4e4;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -60,7 +75,14 @@
     <h1>Into the Wild: A Mountain Lion Encounter</h1>
   </header>
 
-  <section>
+  <nav>
+    <a href="#encounter">The Encounter</a>
+    <a href="#lessons">What It Taught Me</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#facts">Scary Facts</a>
+  </nav>
+
+  <section id="encounter">
     <h2>The Encounter</h2>
     <p>It was just another day hiking deep in the Santa Cruz Mountains. The sun was low, filtering through the redwoods like golden smoke. The forest was quiet — not eerie, just still in that way nature sometimes gets when it’s holding its breath.</p>
     <p>That’s when I saw it.</p>
@@ -69,20 +91,33 @@
     <p>For what felt like a minute, we just existed there — two animals in the forest. It eventually turned, padded silently into the trees, and disappeared as if it had never been there.</p>
   </section>
 
-  <section>
+  <section id="lessons">
     <h2>What It Taught Me</h2>
     <p>People talk about being humbled by nature, but this was different. I didn’t feel small — I felt <strong>real</strong>. Awake. The kind of moment that burns itself into your brain and changes your wiring.</p>
     <p>Since that day, the wilderness hasn’t just been scenic. It’s <em>alive</em> — and it watches back.</p>
   </section>
 
-  <section>
+  <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Mountain_lion_on_rock.jpg" alt="Mountain lion on a rock">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Cougar_in_park.jpg" alt="Puma in wilderness">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Santa_Cruz_Mountains.jpg" alt="Santa Cruz Mountains">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Redwoods_in_Fog_-_Big_Basin_State_Park.jpg" alt="Redwoods in fog">
+      <img src="https://images.unsplash.com/photo-1601758003122-58e1cb900d21?auto=format&fit=crop&w=800&q=80" alt="Mountain lion">
+      <img src="https://images.unsplash.com/photo-1600788813386-bd75df80fbf2?auto=format&fit=crop&w=800&q=80" alt="Puma looking back">
+      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80" alt="Santa Cruz redwoods">
+      <img src="https://images.unsplash.com/photo-1551907234-70c6b1e5f1e1?auto=format&fit=crop&w=800&q=80" alt="Foggy trail">
     </div>
+  </section>
+
+  <section id="facts">
+    <h2>Scary Mountain Lion Facts</h2>
+    <ul>
+      <li>Mountain lions can leap over 40 feet in a single bound — that’s longer than a school bus.</li>
+      <li>They can sprint up to 50 mph for short bursts, making them one of the fastest land predators in North America.</li>
+      <li>A single mountain lion has a territory that can cover over 150 square miles.</li>
+      <li>They are ambush predators — they stalk quietly, then strike with a surprise attack aimed at the neck.</li>
+      <li>Mountain lions have been known to kill animals much larger than themselves, including elk and moose.</li>
+      <li>They are nearly invisible when they choose to be — their coat blends perfectly into rocky, wooded terrain.</li>
+      <li>You’re more likely to be stalked by a mountain lion without even knowing it — they’ll follow silently behind to size you up.</li>
+    </ul>
   </section>
 
   <footer>
