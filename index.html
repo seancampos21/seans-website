@@ -11,6 +11,11 @@
       color: #222;
       background-color: #f2f2f2;
       line-height: 1.6;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    body.night {
+      background-color: #0d0d0d;
+      color: #ccc;
     }
     header {
       background-image: url('https://images.unsplash.com/photo-1617201168646-e2ba27da729b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
@@ -68,9 +73,34 @@
     nav a:hover {
       text-decoration: underline;
     }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
+  <audio id="scream-audio" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+  <script>
+    // Dark mode after 7pm
+    const hour = new Date().getHours();
+    if (hour >= 19 || hour <= 5) {
+      document.body.classList.add("night");
+    }
+
+    // Trigger scream sound when scrolling to encounter
+    window.addEventListener("scroll", () => {
+      const encounter = document.getElementById("encounter");
+      const rect = encounter.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        document.getElementById("scream-audio").play();
+      }
+    }, { once: true });
+  </script>
+
   <header>
     <h1>Into the Wild: A Mountain Lion Encounter</h1>
   </header>
@@ -80,30 +110,32 @@
     <a href="#lessons">What It Taught Me</a>
     <a href="#gallery">Gallery</a>
     <a href="#facts">Scary Facts</a>
+    <a href="#map">Map</a>
   </nav>
 
   <section id="encounter">
     <h2>The Encounter</h2>
-    <p>It was just another day hiking deep in the Santa Cruz Mountains. The sun was low, filtering through the redwoods like golden smoke. The forest was quiet — not eerie, just still in that way nature sometimes gets when it’s holding its breath.</p>
-    <p>That’s when I saw it.</p>
-    <p>A mountain lion. Not in the distance, not through binoculars — but there, maybe 30 feet away, standing stone-still on the trail ahead. It wasn’t crouched or aggressive. Just watching. Like it had been there the whole time, waiting for <em>me</em> to notice <em>it</em>.</p>
-    <p>I froze. My breath got shallow. Every instinct in me screamed to run, but something deeper — maybe ancient — told me to stay still. Don’t look it in the eye. Don’t turn your back.</p>
-    <p>For what felt like a minute, we just existed there — two animals in the forest. It eventually turned, padded silently into the trees, and disappeared as if it had never been there.</p>
+    <p>My girlfriend and I were camping at Portola Redwoods — specifically site #49. We were unwinding: music playing, drinks in hand, a bit of weed, and the calm hush of the forest around us. Around 9:20 p.m., we heard an animal moving through the brush behind our campsite. At first, it didn’t feel unusual — we’d seen wildlife before while camping. But this one felt... different.</p>
+    <p>It was subtle. Controlled. The animal never rushed or stumbled — it moved with purpose. You could tell it was aware of us, almost circling, staying just out of view.</p>
+    <p>Then, around 9:45 p.m., my girlfriend swung her headlamp toward the sound and locked eyes with it. She stared for 5 to 10 seconds — dead silent — until I turned to look. At that moment, it turned away and disappeared. All she could recall were the glowing eyes reflecting from the dark.</p>
+    <p>Quiet hours hit at 10:00, so we powered down the music and locked up the food. Around 10:15, I heard it again — that same calculated rustling in the woods. Curious (and admittedly a little high), I assumed it might be a bobcat. I grabbed my phone and shined its light into the woods where the sound had been coming from — roughly 20 feet away.</p>
+    <p>The forest behind our site sloped upward, a hilly ridge overlooking our camp. As my light hit the trees, a sound cut through the night — a loud, piercing scream. It was high-pitched, almost human, like a child wailing. At first, I thought it was one of the kids from another campsite. But then I realized: the sound wasn’t coming from behind me — it was coming from the exact spot I was shining my light into.</p>
+    <p>I froze. That scream had started the moment my beam lit the forest. And even after I turned the light off, it continued for five more seconds... then stopped, swallowed by silence.</p>
+    <p>I didn’t see it. But I heard it. And I knew — almost instinctively — it was a mountain lion.</p>
   </section>
 
   <section id="lessons">
     <h2>What It Taught Me</h2>
-    <p>People talk about being humbled by nature, but this was different. I didn’t feel small — I felt <strong>real</strong>. Awake. The kind of moment that burns itself into your brain and changes your wiring.</p>
-    <p>Since that day, the wilderness hasn’t just been scenic. It’s <em>alive</em> — and it watches back.</p>
+    <p>Nature isn’t just something you visit. It’s aware of you. That night at Portola made it crystal clear: there are things in the wild that move quietly, watch patiently, and leave a mark without ever touching you.</p>
+    <p>I’ve seen bears. I’ve dealt with raccoons. But nothing stuck with me like that scream. Now, when I hike or camp, I don’t just glance around — I listen deeper. The wild doesn’t always make itself known. But it’s there. Watching.</p>
   </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1601758003122-58e1cb900d21?auto=format&fit=crop&w=800&q=80" alt="Mountain lion">
-      <img src="https://images.unsplash.com/photo-1600788813386-bd75df80fbf2?auto=format&fit=crop&w=800&q=80" alt="Puma looking back">
-      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80" alt="Santa Cruz redwoods">
-      <img src="https://images.unsplash.com/photo-1551907234-70c6b1e5f1e1?auto=format&fit=crop&w=800&q=80" alt="Foggy trail">
+      <img src="/mnt/data/bf8b7152-a869-4b2e-8102-22feb4564261.png" alt="Lioness roaring">
+      <img src="/mnt/data/attachment-thomas-s-ODc2QvK6Ca0-unsplash.webp" alt="Snarling mountain lion close-up">
+      <img src="/mnt/data/download.jpg" alt="Mountain lion baring teeth">
     </div>
   </section>
 
@@ -118,6 +150,11 @@
       <li>They are nearly invisible when they choose to be — their coat blends perfectly into rocky, wooded terrain.</li>
       <li>You’re more likely to be stalked by a mountain lion without even knowing it — they’ll follow silently behind to size you up.</li>
     </ul>
+  </section>
+
+  <section id="map">
+    <h2>Map: Portola Redwoods Site #49</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.278511875311!2d-122.2234288240162!3d37.258078739683556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa36b535eee29%3A0x8497353c6503cf71!2sPortola%20Redwoods%20State%20Park!5e0!3m2!1sen!2sus!4v1720067580000!5m2!1sen!2sus" allowfullscreen=""></iframe>
   </section>
 
   <footer>
