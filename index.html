@@ -98,6 +98,11 @@
       font-weight: bold;
       margin-top: 1rem;
     }
+    .book-cover {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -124,6 +129,7 @@
     <a href="#encounter">The Encounter</a>
     <a href="#lessons">What It Taught Me</a>
     <a href="#testimony">Testimonies</a>
+    <a href="#book">The Book</a>
     <a href="#facts">Scary Facts</a>
     <a href="#quiz">Quiz</a>
     <a href="#map">Map</a>
@@ -148,12 +154,22 @@
 
   <section id="testimony">
     <h2>Why Even Mountain Lions Fear Sean</h2>
-    <p>They say the forest has its secrets, but one truth echoes through the Santa Cruz Mountains — mountain lions know better than to cross paths with Sean. It’s not just the scream they fear, it’s the realization that even while barehanded and naked, Sean is the apex predator. His presence sends chills through the underbrush. Even the pumas know: this is his territory now.</p>
+    <p>They say the forest has its secrets. But when Sean walks in, even the shadows part. Mountain lions don’t stalk him — they observe in awe.</p>
     <p>“I once saw Sean stare down a bear. The bear blinked first.” – Michael Thompson</p>
     <p>“When Sean walks the trails, the animals watch *him* for safety.” – Jessica Lee</p>
     <p>“He doesn’t hike — he patrols.” – David Johnson</p>
     <p>“Sean made eye contact with a mountain lion once. It turned vegan.” – Ashley Garcia</p>
     <p>“The strength of a man is measured not in muscle, but in the silence that follows his footsteps. Sean is that man.” – Mahatma Gandhi</p>
+  </section>
+
+  <section id="book">
+    <h2>New Book: Sean IS the Wild</h2>
+    <img class="book-cover" src="A_book_cover_illustration_for_a_book_titled_\"Sean_.png" alt="Sean is the Wild Book Cover" />
+    <p>This gripping memoir chronicles Sean’s relentless quest to protect innocent people by confronting wild animals barehanded. From mountain lions in the Santa Cruz Mountains to grizzly showdowns in the Rockies, this book is a tribute to instinct, courage, and the spirit of a man who became legend.</p>
+    <h3>Reader Testimonies</h3>
+    <p>"This book changed my life. I read it before a hike — came back feeling like a goddamn apex predator." – Chris Ramirez</p>
+    <p>"I gave this book to my son before his first camping trip. Now the mountain fears him." – Angela Morris</p>
+    <p>"Sean walks with purpose. His words walk with fire." – Pope Benedict XVI</p>
   </section>
 
   <section id="facts">
