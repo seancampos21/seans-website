@@ -114,59 +114,6 @@
         document.getElementById("scream-audio").play();
       }
     }, { once: true });
-
-    const quiz = [
-      {
-        question: "How far can a mountain lion leap in a single bound?",
-        answers: ["10 feet", "20 feet", "40 feet"],
-        correct: 2
-      },
-      {
-        question: "How fast can a mountain lion sprint?",
-        answers: ["30 mph", "40 mph", "50 mph"],
-        correct: 2
-      },
-      {
-        question: "What kind of predator is a mountain lion?",
-        answers: ["Ambush predator", "Pack hunter", "Scavenger"],
-        correct: 0
-      },
-      {
-        question: "What size territory can a mountain lion cover?",
-        answers: ["10 square miles", "50 square miles", "150 square miles"],
-        correct: 2
-      }
-    ];
-    let currentQuestion = 0;
-    let score = 0;
-    function displayQuestion() {
-      const q = quiz[currentQuestion];
-      document.getElementById("question").innerText = q.question;
-      const answersDiv = document.getElementById("answers");
-      answersDiv.innerHTML = "";
-      q.answers.forEach((answer, index) => {
-        const label = document.createElement("label");
-        label.innerHTML = `<input type='radio' name='answer' value='${index}' /> ${answer}`;
-        answersDiv.appendChild(label);
-      });
-    }
-    function nextQuestion() {
-      const selected = document.querySelector("input[name='answer']:checked");
-      if (!selected) {
-        alert("Please select an answer.");
-        return;
-      }
-      const answer = parseInt(selected.value);
-      if (answer === quiz[currentQuestion].correct) {
-        score++;
-      }
-      currentQuestion++;
-      if (currentQuestion < quiz.length) {
-        displayQuestion();
-      } else {
-        document.getElementById("quiz-container").innerHTML = `<h2>Your Score: ${score}/${quiz.length}</h2>`;
-      }
-    }
   </script>
 
   <header>
@@ -184,13 +131,19 @@
 
   <section id="encounter">
     <h2>The Encounter</h2>
-    <p>My girlfriend and I were camping at Portola Redwoods — specifically site #49. We were unwinding: music playing, drinks in hand, a bit of weed, and the calm hush of the forest around us. Around 9:20 p.m., we heard an animal moving through the brush behind our campsite...</p>
-    <!-- (continue story if needed) -->
+    <p>My girlfriend and I were camping at Portola Redwoods — specifically site #49. We were unwinding: music playing, drinks in hand, a bit of weed, and the calm hush of the forest around us. Around 9:20 p.m., we heard an animal moving through the brush behind our campsite. At first, it didn’t feel unusual — we’d seen wildlife before while camping. But this one felt... different.</p>
+    <p>It was subtle. Controlled. The animal never rushed or stumbled — it moved with purpose. You could tell it was aware of us, almost circling, staying just out of view.</p>
+    <p>Then, around 9:45 p.m., my girlfriend swung her headlamp toward the sound and locked eyes with it. She stared for 5 to 10 seconds — dead silent — until I turned to look. At that moment, it turned away and disappeared. All she could recall were the glowing eyes reflecting from the dark.</p>
+    <p>Quiet hours hit at 10:00, so we powered down the music and locked up the food. Around 10:15, I heard it again — that same calculated rustling in the woods. Curious (and admittedly a little high), I assumed it might be a bobcat. I grabbed my phone and shined its light into the woods where the sound had been coming from — roughly 20 feet away.</p>
+    <p>The forest behind our site sloped upward, a hilly ridge overlooking our camp. As my light hit the trees, a sound cut through the night — a loud, piercing scream. It was high-pitched, almost human, like a child wailing. At first, I thought it was one of the kids from another campsite. But then I realized: the sound wasn’t coming from behind me — it was coming from the exact spot I was shining my light into.</p>
+    <p>I froze. That scream had started the moment my beam lit the forest. And even after I turned the light off, it continued for five more seconds... then stopped, swallowed by silence.</p>
+    <p>I didn’t see it. But I heard it. And I knew — almost instinctively — it was a mountain lion.</p>
   </section>
 
   <section id="lessons">
     <h2>What It Taught Me</h2>
     <p>Nature isn’t just something you visit. It’s aware of you. That night at Portola made it crystal clear: there are things in the wild that move quietly, watch patiently, and leave a mark without ever touching you.</p>
+    <p>I’ve seen bears. I’ve dealt with raccoons. But nothing stuck with me like that scream. Now, when I hike or camp, I don’t just glance around — I listen deeper. The wild doesn’t always make itself known. But it’s there. Watching.</p>
   </section>
 
   <section id="testimony">
@@ -226,14 +179,42 @@
 
   <section id="map">
     <h2>Map: Portola Redwoods Site #49</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.278511875311!2d-122.2234288240162!3d37.258078739683556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa36b535eee29%3A0x8497353c6503cf71!2sPortola%20Redwoods%20State%20Park!5e0!3m2!1sen!2sus!4v1720067580000!5m2!1sen!2sus" allowfullscreen=""></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.278511875311!2d-122.2234288240162!3d37.258078739683556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa36b535eee29%3A0x8497353c6503cf71!2sPortola%20Redwoods%20State%20Park!5e0!3m2!1sen!2sus!4v1720067580000!5m2!1sen!2sus" allowfullscreen></iframe>
   </section>
 
   <footer>
     <p>Site created by Sean Campos | Inspired by a true encounter in Northern California</p>
+    <p>If you want pumas to stay in check and people to stay safe, you know what you need to do: <strong>Donate now.</strong></p>
+    <p>Venmo: <strong>@Sean-Campos21</strong></p>
   </footer>
 
   <script>
+    const quiz = [...document.querySelectorAll('.quiz-container')][0];
+    const qData = [
+      { question: "How far can a mountain lion leap in a single bound?", answers: ["10 feet", "20 feet", "40 feet"], correct: 2 },
+      { question: "How fast can a mountain lion sprint?", answers: ["30 mph", "40 mph", "50 mph"], correct: 2 },
+      { question: "What kind of predator is a mountain lion?", answers: ["Ambush predator", "Pack hunter", "Scavenger"], correct: 0 },
+      { question: "What size territory can a mountain lion cover?", answers: ["10 sq mi", "50 sq mi", "150 sq mi"], correct: 2 }
+    ];
+    let idx = 0, score = 0;
+    function displayQuestion() {
+      const q = qData[idx];
+      document.getElementById("question").innerText = q.question;
+      const ansDiv = document.getElementById("answers");
+      ansDiv.innerHTML = "";
+      q.answers.forEach((a, i) => {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type='radio' name='answer' value='${i}' /> ${a}`;
+        ansDiv.appendChild(label);
+      });
+    }
+    function nextQuestion() {
+      const selected = document.querySelector("input[name='answer']:checked");
+      if (!selected) return alert("Please select an answer.");
+      if (+selected.value === qData[idx].correct) score++;
+      if (++idx < qData.length) displayQuestion();
+      else document.getElementById("quiz-container").innerHTML = `<h2>Your Score: ${score}/${qData.length}</h2>`;
+    }
     displayQuestion();
   </script>
 </body>
