@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Into the Wild: A Mountain Lion Encounter</title>
+  <title>Sean VS Puma</title>
   <style>
     body {
       margin: 0;
@@ -18,15 +18,13 @@
       color: #ccc;
     }
     header {
-      background-image: url('https://images.unsplash.com/photo-1617201168646-e2ba27da729b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
-      background-size: cover;
-      background-position: center;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 2rem;
+      background-color: #222;
     }
     header h1 {
       font-size: 3rem;
@@ -39,18 +37,6 @@
       padding: 3rem 2rem;
       max-width: 800px;
       margin: auto;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .gallery img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
     }
     footer {
       text-align: center;
@@ -128,6 +114,7 @@
         document.getElementById("scream-audio").play();
       }
     }, { once: true });
+
     const quiz = [
       {
         question: "How far can a mountain lion leap in a single bound?",
@@ -181,53 +168,52 @@
       }
     }
   </script>
+
   <header>
-    <h1>Into the Wild: A Mountain Lion Encounter</h1>
+    <h1>Sean VS Puma</h1>
   </header>
+
   <nav>
     <a href="#encounter">The Encounter</a>
     <a href="#lessons">What It Taught Me</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#testimony">Testimonies</a>
     <a href="#facts">Scary Facts</a>
     <a href="#quiz">Quiz</a>
     <a href="#map">Map</a>
   </nav>
+
   <section id="encounter">
     <h2>The Encounter</h2>
-    <p>My girlfriend and I were camping at Portola Redwoods — specifically site #49. We were unwinding: music playing, drinks in hand, a bit of weed, and the calm hush of the forest around us. Around 9:20 p.m., we heard an animal moving through the brush behind our campsite. At first, it didn’t feel unusual — we’d seen wildlife before while camping. But this one felt... different.</p>
-    <p>It was subtle. Controlled. The animal never rushed or stumbled — it moved with purpose. You could tell it was aware of us, almost circling, staying just out of view.</p>
-    <p>Then, around 9:45 p.m., my girlfriend swung her headlamp toward the sound and locked eyes with it. She stared for 5 to 10 seconds — dead silent — until I turned to look. At that moment, it turned away and disappeared. All she could recall were the glowing eyes reflecting from the dark.</p>
-    <p>Quiet hours hit at 10:00, so we powered down the music and locked up the food. Around 10:15, I heard it again — that same calculated rustling in the woods. Curious (and admittedly a little high), I assumed it might be a bobcat. I grabbed my phone and shined its light into the woods where the sound had been coming from — roughly 20 feet away.</p>
-    <p>The forest behind our site sloped upward, a hilly ridge overlooking our camp. As my light hit the trees, a sound cut through the night — a loud, piercing scream. It was high-pitched, almost human, like a child wailing. At first, I thought it was one of the kids from another campsite. But then I realized: the sound wasn’t coming from behind me — it was coming from the exact spot I was shining my light into.</p>
-    <p>I froze. That scream had started the moment my beam lit the forest. And even after I turned the light off, it continued for five more seconds... then stopped, swallowed by silence.</p>
-    <p>I didn’t see it. But I heard it. And I knew — almost instinctively — it was a mountain lion.</p>
+    <p>My girlfriend and I were camping at Portola Redwoods — specifically site #49. We were unwinding: music playing, drinks in hand, a bit of weed, and the calm hush of the forest around us. Around 9:20 p.m., we heard an animal moving through the brush behind our campsite...</p>
+    <!-- (continue story if needed) -->
   </section>
+
   <section id="lessons">
     <h2>What It Taught Me</h2>
     <p>Nature isn’t just something you visit. It’s aware of you. That night at Portola made it crystal clear: there are things in the wild that move quietly, watch patiently, and leave a mark without ever touching you.</p>
-    <p>I’ve seen bears. I’ve dealt with raccoons. But nothing stuck with me like that scream. Now, when I hike or camp, I don’t just glance around — I listen deeper. The wild doesn’t always make itself known. But it’s there. Watching.</p>
   </section>
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1601758003122-58e1cb900d21?auto=format&fit=crop&w=800&q=80" alt="Mountain lion">
-      <img src="https://images.unsplash.com/photo-1600788813386-bd75df80fbf2?auto=format&fit=crop&w=800&q=80" alt="Puma looking back">
-      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80" alt="Santa Cruz redwoods">
-      <img src="https://images.unsplash.com/photo-1551907234-70c6b1e5f1e1?auto=format&fit=crop&w=800&q=80" alt="Foggy trail">
-    </div>
+
+  <section id="testimony">
+    <h2>Why Even Mountain Lions Fear Sean</h2>
+    <p>They say the forest has its secrets, but one truth echoes through the Santa Cruz Mountains — mountain lions know better than to cross paths with Sean. It’s not just the scream they fear, it’s the realization that even while barehanded and naked, Sean is the apex predator. His presence sends chills through the underbrush. Even the pumas know: this is his territory now.</p>
+    <p>“I once saw Sean stare down a bear. The bear blinked first.” – Michael Thompson</p>
+    <p>“When Sean walks the trails, the animals watch *him* for safety.” – Jessica Lee</p>
+    <p>“He doesn’t hike — he patrols.” – David Johnson</p>
+    <p>“Sean made eye contact with a mountain lion once. It turned vegan.” – Ashley Garcia</p>
+    <p>“The strength of a man is measured not in muscle, but in the silence that follows his footsteps. Sean is that man.” – Mahatma Gandhi</p>
   </section>
+
   <section id="facts">
     <h2>Scary Mountain Lion Facts</h2>
     <ul>
-      <li>Mountain lions can leap over 40 feet in a single bound — that’s longer than a school bus.</li>
-      <li>They can sprint up to 50 mph for short bursts, making them one of the fastest land predators in North America.</li>
-      <li>A single mountain lion has a territory that can cover over 150 square miles.</li>
-      <li>They are ambush predators — they stalk quietly, then strike with a surprise attack aimed at the neck.</li>
-      <li>Mountain lions have been known to kill animals much larger than themselves, including elk and moose.</li>
-      <li>They are nearly invisible when they choose to be — their coat blends perfectly into rocky, wooded terrain.</li>
-      <li>You’re more likely to be stalked by a mountain lion without even knowing it — they’ll follow silently behind to size you up.</li>
+      <li>Mountain lions can leap over 40 feet in a single bound.</li>
+      <li>They can sprint up to 50 mph for short bursts.</li>
+      <li>A single mountain lion may roam a territory of 150 square miles.</li>
+      <li>They are ambush predators — stalking quietly, then attacking.</li>
+      <li>They can kill animals far larger than themselves — even moose.</li>
     </ul>
   </section>
+
   <section id="quiz">
     <h2>Test Your Mountain Lion Knowledge</h2>
     <div class="quiz-container" id="quiz-container">
@@ -237,13 +223,16 @@
       <div class="result" id="result"></div>
     </div>
   </section>
+
   <section id="map">
     <h2>Map: Portola Redwoods Site #49</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.278511875311!2d-122.2234288240162!3d37.258078739683556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa36b535eee29%3A0x8497353c6503cf71!2sPortola%20Redwoods%20State%20Park!5e0!3m2!1sen!2sus!4v1720067580000!5m2!1sen!2sus" allowfullscreen=""></iframe>
   </section>
+
   <footer>
     <p>Site created by Sean Campos | Inspired by a true encounter in Northern California</p>
   </footer>
+
   <script>
     displayQuestion();
   </script>
